@@ -649,7 +649,7 @@ def make_fallback_instruction(summary: Dict[str, Any]) -> str:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--ir_root", type=str, required=True)
+    ap.add_argument("--neutral_root", type=str, required=True)
     ap.add_argument("--out_root", type=str, required=True)
     ap.add_argument("--glob", type=str, default=DEFAULT_GLOB)
     ap.add_argument("--model", type=str, default=DEFAULT_MODEL)

@@ -1,14 +1,4 @@
-#!/usr/bin/env python3
-# ir_dir_to_whucad.py
-#
-# Convert a folder of *.ir.json files (cad_ir.v0.1) into WHUCAD-style *.h5 files.
-# Also optionally dumps produced vec to *.vec.json for inspection.
-#
-# Example:
-#   python3 ir_dir_to_whucad.py --ir_root ./IR --out_root ./RECON_ALL --dump_vec_json
-#
-# Requirements:
-#   pip install h5py numpy
+# python3 ir_dir_to_whucad.py --ir_root ./IR --out_root ./RECON_ALL --dump_vec_json
 
 from __future__ import annotations
 
@@ -56,13 +46,6 @@ def ensure_row_len(row: List[int], row_len: int) -> List[int]:
 
 
 def flatten_rows(ir: Dict[str, Any], row_len: int) -> Tuple[List[List[int]], Dict[str, Any]]:
-    """
-    This expects each IR feature to carry verbatim WHUCAD rows in:
-      feature["_whucad_rows"] : List[List[int]]
-    so the reconstruction can be exact (SAME vec).
-
-    If a feature has no _whucad_rows, we fail fast.
-    """
     seq = ir.get("sequence", [])
     if not isinstance(seq, list):
         raise ValueError("IR: 'sequence' must be a list")
@@ -84,9 +67,8 @@ def flatten_rows(ir: Dict[str, Any], row_len: int) -> Tuple[List[List[int]], Dic
             rows.append(rr)
 
     if not rows:
-        raise ValueError("No rows produced from IR")
+        raise ValueError("No rows produced from neutral")
 
-    # Ensure EOS exists
     if int(rows[-1][0]) != EOS_OPID:
         eos = [-1] * row_len
         eos[0] = EOS_OPID
@@ -103,7 +85,6 @@ def iter_ir_files(root: Path) -> List[Path]:
 
 def derive_out_paths(ir_path: Path, in_root: Path, out_root: Path) -> Tuple[Path, Path]:
     rel = ir_path.relative_to(in_root)
-    # 0000/00000008.ir.json -> 0000/00000008.h5, 0000/00000008.vec.json
     name = rel.name
     base = name[:-len(".ir.json")] if name.endswith(".ir.json") else ir_path.stem
     out_h5 = out_root / rel.parent / f"{base}.h5"
@@ -113,7 +94,7 @@ def derive_out_paths(ir_path: Path, in_root: Path, out_root: Path) -> Tuple[Path
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--ir_root", required=True, help="Input folder containing *.ir.json")
+    ap.add_argument("--neutral_root", required=True, help="Input folder containing *.ir.json")
     ap.add_argument("--out_root", required=True, help="Output folder to write *.h5 (+ optional *.vec.json)")
     ap.add_argument("--dataset", default="vec", help="H5 dataset name (default vec)")
     ap.add_argument("--row_len", type=int, default=DEFAULT_ROW_LEN)

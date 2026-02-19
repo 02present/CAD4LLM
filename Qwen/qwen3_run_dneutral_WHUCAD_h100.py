@@ -434,7 +434,7 @@ def main() -> None:
 
     ap.add_argument("--model", type=str, default="Qwen/Qwen3-8B")
 
-    ap.add_argument("--ir_json", type=str, default="")
+    ap.add_argument("--neutral_json", type=str, default="")
     ap.add_argument("--out_txt", type=str, default="")
 
     ap.add_argument("--ir_root", type=str, default="")
