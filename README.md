@@ -3,11 +3,11 @@
 
 ## 파일 목록 및 설명
 
-**/Qwen** : LLM 관련 작업 폴더
+`**/Qwen**` : LLM 관련 작업 폴더
 
-**/converter** : 중립포맷으로 변환하는데 사용하는 converter (하단 설명 참조)
+`**/converter**` : 중립포맷으로 변환하는데 사용하는 converter (하단 설명 참조)
 
-**/dataset** : 최종 출력된 중립포맷(Neutral)과 UserPrompt 폴더 (최종 데이터셋 폴더)
+`**/dataset**` : 최종 출력된 중립포맷(Neutral)과 UserPrompt 폴더 (최종 데이터셋 폴더)
 
 ### `deepcad_json_to_neutral_batch.py`
 
