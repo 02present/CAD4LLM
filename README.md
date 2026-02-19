@@ -48,10 +48,10 @@ python3 jsonl_creator.py
 
 **사용법**:
 ```bash
-python3 neutral_to_whucad.py --ir_root <input_ir_dir> --out_root <output_h5_dir>
+python3 neutral_to_whucad.py --neutral_root <input_neutral_dir> --out_root <output_h5_dir>
 ```
 
-- `--ir_root`: 변환할 `neutral` JSON 파일들이 위치한 디렉터리
+- `--neutral_root`: 변환할 `neutral` JSON 파일들이 위치한 디렉터리
 - `--out_root`: 변환 후 결과를 저장할 H5 파일들이 위치한 디렉터리
 
 ### `neutral_to_xml.py`
@@ -75,7 +75,7 @@ python3 neutral_to_xml.py --input <input_json_file_or_dir> --output <output_xml_
 python3 qwen3_run_dneutral_WHUCAD_h100.py --neutral_json <input_neutral_file> --out_txt <output_txt_file>
 ```
 
-- `--neutral_json`: 변환할 IR 파일 (예: `.neutral.json` 형식)
+- `--neutral_json`: 변환할 neutral 파일 (예: `.neutral.json` 형식)
 - `--out_txt`: 생성된 텍스트 지시문을 저장할 파일
 
 **옵션**:
