@@ -1,0 +1,461 @@
+{
+  "schema": "cad_ir.v0.1",
+  "meta": {
+    "source": "DeepCAD",
+    "sample_id": "0089/00897736",
+    "units": "mm",
+    "convert_logs": [
+      "entity_lookup: found 6 entities",
+      "detected: dict['sequence'] list"
+    ],
+    "input_relpath": "0089/00897736.json"
+  },
+  "sequence": [
+    {
+      "id": "F1",
+      "type": "Sketch",
+      "name": "Sketch 1",
+      "plane": {
+        "kind": "XY",
+        "ref": null
+      },
+      "entities": [
+        {
+          "id": "E1",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            0.0,
+            0.0
+          ],
+          "p1": [
+            -31.56254,
+            10.88484
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E2",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -31.56254,
+            10.88484
+          ],
+          "p1": [
+            -45.91474,
+            -17.53948
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E3",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -45.91474,
+            -17.53948
+          ],
+          "p1": [
+            29.66591,
+            -17.53948
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E4",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            10.43074,
+            5.98077
+          ],
+          "p1": [
+            29.66591,
+            -17.53948
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E5",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            2.0625600000000004,
+            5.98077
+          ],
+          "p1": [
+            10.43074,
+            5.98077
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E6",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            0.0,
+            0.0
+          ],
+          "p1": [
+            2.0625600000000004,
+            5.98077
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 6,
+        "n_arcs": 0,
+        "n_circles": 0,
+        "n_entities": 6,
+        "bbox": [
+          -45.91474,
+          -17.53948,
+          29.66591,
+          10.88484
+        ],
+        "loops": null
+      }
+    },
+    {
+      "id": "F2",
+      "type": "Extrude",
+      "name": "Extrude 1",
+      "sketch_ref": "F1",
+      "distance_mm": 140.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "NewBody",
+      "end_condition": "Blind"
+    },
+    {
+      "id": "F3",
+      "type": "Sketch",
+      "name": "Sketch 2",
+      "plane": {
+        "kind": "FaceRef",
+        "ref": "FaceRef:F2:end"
+      },
+      "entities": [
+        {
+          "id": "E7",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -6.693372409042499,
+            59.99999991220355
+          ],
+          "radius": 4.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E8",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -11.6933748044317,
+            19.999999970734518
+          ],
+          "radius": 4.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E9",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -1.6933732738832008,
+            -19.999999970734503
+          ],
+          "radius": 4.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E10",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -6.693372409042499,
+            -59.99999991220354
+          ],
+          "radius": 4.0,
+          "a0": null,
+          "a1": null
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 0,
+        "n_arcs": 0,
+        "n_circles": 4,
+        "n_entities": 4,
+        "bbox": [
+          -15.6933748044317,
+          -63.99999991220354,
+          2.306626726116799,
+          63.99999991220355
+        ],
+        "loops": null
+      }
+    },
+    {
+      "id": "F4",
+      "type": "Extrude",
+      "name": "Extrude 2",
+      "sketch_ref": "F3",
+      "distance_mm": -30.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "Cut",
+      "end_condition": "Blind"
+    },
+    {
+      "id": "F5",
+      "type": "Sketch",
+      "name": "Sketch 3",
+      "plane": {
+        "kind": "FaceRef",
+        "ref": "FaceRef:F4:end"
+      },
+      "entities": [
+        {
+          "id": "E11",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -6.693372409042499,
+            -59.99999991220354
+          ],
+          "radius": 2.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E12",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -6.693372409042499,
+            -59.99999991220354
+          ],
+          "radius": 4.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E13",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -6.693372409042499,
+            -59.99999991220354
+          ],
+          "radius": 2.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E14",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -11.6933748044317,
+            19.999999970734518
+          ],
+          "radius": 4.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E15",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -11.6933748044317,
+            19.999999970734518
+          ],
+          "radius": 2.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E16",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -6.693372409042499,
+            59.99999991220355
+          ],
+          "radius": 2.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E17",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -1.6933732738832008,
+            -19.999999970734503
+          ],
+          "radius": 4.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E18",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -1.6933732738832008,
+            -19.999999970734503
+          ],
+          "radius": 2.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E19",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -11.6933748044317,
+            19.999999970734518
+          ],
+          "radius": 2.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E20",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -6.693372409042499,
+            59.99999991220355
+          ],
+          "radius": 4.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E21",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -6.693372409042499,
+            59.99999991220355
+          ],
+          "radius": 2.0,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E22",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -1.6933732738832008,
+            -19.999999970734503
+          ],
+          "radius": 2.0,
+          "a0": null,
+          "a1": null
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 0,
+        "n_arcs": 0,
+        "n_circles": 12,
+        "n_entities": 12,
+        "bbox": [
+          -15.6933748044317,
+          -63.99999991220354,
+          2.306626726116799,
+          63.99999991220355
+        ],
+        "loops": null
+      }
+    },
+    {
+      "id": "F6",
+      "type": "Extrude",
+      "name": "Extrude 3",
+      "sketch_ref": "F5",
+      "distance_mm": -10.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "Join",
+      "end_condition": "Blind"
+    }
+  ]
+}

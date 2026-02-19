@@ -1,0 +1,194 @@
+{
+  "schema": "cad_ir.v0.1",
+  "meta": {
+    "source": "DeepCAD",
+    "sample_id": "0012/00120839",
+    "units": "mm",
+    "convert_logs": [
+      "entity_lookup: found 5 entities",
+      "detected: dict['sequence'] list"
+    ],
+    "input_relpath": "0012/00120839.json"
+  },
+  "sequence": [
+    {
+      "id": "F2",
+      "type": "Sketch",
+      "name": "Sketch 1",
+      "plane": {
+        "kind": "XY",
+        "ref": null
+      },
+      "entities": [
+        {
+          "id": "E1",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -17.114440000000002,
+            -35.227219999999996
+          ],
+          "p1": [
+            23.96021,
+            -35.227219999999996
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E2",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            32.80268,
+            0.0
+          ],
+          "p1": [
+            4.84909,
+            29.807650000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E3",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            4.84909,
+            29.807650000000002
+          ],
+          "p1": [
+            -16.54396,
+            29.807650000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E4",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -16.54396,
+            29.807650000000002
+          ],
+          "p1": [
+            -21.96353,
+            20.679949999999998
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E5",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -21.96353,
+            20.679949999999998
+          ],
+          "p1": [
+            -13.12107,
+            9.55556
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 5,
+        "n_arcs": 0,
+        "n_circles": 0,
+        "n_entities": 5,
+        "bbox": [
+          -21.96353,
+          -35.227219999999996,
+          32.80268,
+          29.807650000000002
+        ],
+        "loops": null
+      }
+    },
+    {
+      "id": "F3",
+      "type": "Extrude",
+      "name": "Extrude 1",
+      "sketch_ref": "F2",
+      "distance_mm": 25.400000000000002,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "NewBody",
+      "end_condition": "Blind"
+    },
+    {
+      "id": "F4",
+      "type": "Sketch",
+      "name": "Sketch 2",
+      "plane": {
+        "kind": "FaceRef",
+        "ref": "FaceRef:F3:end"
+      },
+      "entities": [
+        {
+          "id": "E6",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            0.006789999999999574,
+            2.0067202244202016
+          ],
+          "radius": 12.28552,
+          "a0": null,
+          "a1": null
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 0,
+        "n_arcs": 0,
+        "n_circles": 1,
+        "n_entities": 1,
+        "bbox": [
+          -12.278730000000001,
+          -10.278799775579799,
+          12.292309999999999,
+          14.292240224420201
+        ],
+        "loops": null
+      }
+    },
+    {
+      "id": "F5",
+      "type": "Extrude",
+      "name": "Extrude 2",
+      "sketch_ref": "F4",
+      "distance_mm": 25.400000000000002,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "Join",
+      "end_condition": "Blind"
+    }
+  ]
+}

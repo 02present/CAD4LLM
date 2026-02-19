@@ -1,0 +1,933 @@
+{
+  "schema": "cad_neutral.v0.1",
+  "meta": {
+    "source": "DeepCAD",
+    "sample_id": "0014/00140401",
+    "units": "mm",
+    "convert_logs": [
+      "entity_lookup: found 4 entities",
+      "detected: dict['sequence'] list"
+    ],
+    "input_relpath": "0014/00140401.json"
+  },
+  "sequence": [
+    {
+      "id": "F2",
+      "type": "Sketch",
+      "name": "Sketch 1",
+      "plane": {
+        "kind": "XY",
+        "ref": null
+      },
+      "entities": [
+        {
+          "id": "E1",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -47.678079999999994,
+            26.10676
+          ],
+          "p1": [
+            66.62192,
+            26.10676
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                -47.678079999999994,
+                26.10676
+              ],
+              "p1": [
+                66.62192,
+                26.10676
+              ]
+            }
+          }
+        },
+        {
+          "id": "E2",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            66.62192,
+            26.10676
+          ],
+          "p1": [
+            66.62192,
+            -50.093239999999994
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                66.62192,
+                26.10676
+              ],
+              "p1": [
+                66.62192,
+                -50.093239999999994
+              ]
+            }
+          }
+        },
+        {
+          "id": "E3",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -47.678079999999994,
+            -50.093239999999994
+          ],
+          "p1": [
+            66.62192,
+            -50.093239999999994
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                -47.678079999999994,
+                -50.093239999999994
+              ],
+              "p1": [
+                66.62192,
+                -50.093239999999994
+              ]
+            }
+          }
+        },
+        {
+          "id": "E4",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -47.678079999999994,
+            26.10676
+          ],
+          "p1": [
+            -47.678079999999994,
+            -50.093239999999994
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                -47.678079999999994,
+                26.10676
+              ],
+              "p1": [
+                -47.678079999999994,
+                -50.093239999999994
+              ]
+            }
+          }
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 4,
+        "n_arcs": 0,
+        "n_circles": 0,
+        "n_entities": 4,
+        "bbox": [
+          -47.678079999999994,
+          -50.093239999999994,
+          66.62192,
+          26.10676
+        ],
+        "loops": null
+      },
+      "raw": {
+        "ops": [
+          {
+            "i": 1,
+            "op": "SOL",
+            "args": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "F3",
+      "type": "Extrude",
+      "name": "Extrude 1",
+      "sketch_ref": "F2",
+      "distance_mm": 7.62,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "NewBody",
+      "end_condition": "Blind",
+      "raw": {
+        "op_name": "Extrude",
+        "args": {
+          "distance_mm": 7.62,
+          "op": "NewBody",
+          "sign": 1
+        },
+        "raw": {
+          "seq_item": {
+            "index": 2,
+            "type": "ExtrudeFeature",
+            "entity": "FT0yJYyk3pjP1oq_0"
+          },
+          "ent": {
+            "name": "Extrude 1",
+            "type": "ExtrudeFeature",
+            "profiles": [
+              {
+                "profile": "JHC",
+                "sketch": "FcFzrEmktpLZLox_0"
+              }
+            ],
+            "extent_two": {
+              "distance": {
+                "type": "ModelParameter",
+                "role": "AgainstDistance",
+                "name": "none",
+                "value": 0.0
+              },
+              "type": "DistanceExtentDefinition",
+              "taper_angle": {
+                "type": "ModelParameter",
+                "role": "Side2TaperAngle",
+                "name": "none",
+                "value": 0.0
+              }
+            },
+            "extent_one": {
+              "distance": {
+                "type": "ModelParameter",
+                "role": "AlongDistance",
+                "name": "none",
+                "value": 0.00762
+              },
+              "type": "DistanceExtentDefinition",
+              "taper_angle": {
+                "type": "ModelParameter",
+                "role": "TaperAngle",
+                "name": "none",
+                "value": 0.0
+              }
+            },
+            "operation": "NewBodyFeatureOperation",
+            "start_extent": {
+              "type": "ProfilePlaneStartDefinition"
+            },
+            "extent_type": "OneSideFeatureExtentType"
+          }
+        }
+      }
+    },
+    {
+      "id": "F4",
+      "type": "Sketch",
+      "name": "Sketch 2",
+      "plane": {
+        "kind": "FaceRef",
+        "ref": "FaceRef:F3:end"
+      },
+      "entities": [
+        {
+          "id": "E5",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -52.705,
+            33.654999999999994
+          ],
+          "p1": [
+            -52.705,
+            -33.654999999999994
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                -52.705,
+                33.654999999999994
+              ],
+              "p1": [
+                -52.705,
+                -33.654999999999994
+              ]
+            }
+          }
+        },
+        {
+          "id": "E6",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -52.705,
+            -33.654999999999994
+          ],
+          "p1": [
+            52.705,
+            -33.654999999999994
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                -52.705,
+                -33.654999999999994
+              ],
+              "p1": [
+                52.705,
+                -33.654999999999994
+              ]
+            }
+          }
+        },
+        {
+          "id": "E7",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            52.705,
+            -33.654999999999994
+          ],
+          "p1": [
+            52.705,
+            33.654999999999994
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                52.705,
+                -33.654999999999994
+              ],
+              "p1": [
+                52.705,
+                33.654999999999994
+              ]
+            }
+          }
+        },
+        {
+          "id": "E8",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -52.705,
+            33.654999999999994
+          ],
+          "p1": [
+            52.705,
+            33.654999999999994
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                -52.705,
+                33.654999999999994
+              ],
+              "p1": [
+                52.705,
+                33.654999999999994
+              ]
+            }
+          }
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 4,
+        "n_arcs": 0,
+        "n_circles": 0,
+        "n_entities": 4,
+        "bbox": [
+          -52.705,
+          -33.654999999999994,
+          52.705,
+          33.654999999999994
+        ],
+        "loops": null
+      },
+      "raw": {
+        "ops": [
+          {
+            "i": 7,
+            "op": "SOL",
+            "args": {}
+          }
+        ]
+      }
+    }
+  ],
+  "raw_ops": [
+    {
+      "i": 0,
+      "op_name": "SOL",
+      "args": {},
+      "raw": {
+        "seq_item": {
+          "index": 0,
+          "type": "Sketch",
+          "entity": "FFMzX3Oal3n0XSV_0"
+        },
+        "ent": {
+          "transform": {
+            "origin": {
+              "y": 0.0,
+              "x": 0.0,
+              "z": 0.0
+            },
+            "y_axis": {
+              "y": 1.0,
+              "x": 0.0,
+              "z": 0.0
+            },
+            "x_axis": {
+              "y": 0.0,
+              "x": 1.0,
+              "z": 0.0
+            },
+            "z_axis": {
+              "y": 0.0,
+              "x": 0.0,
+              "z": 1.0
+            }
+          },
+          "type": "Sketch",
+          "name": "Sketch 1",
+          "profiles": {},
+          "reference_plane": {}
+        }
+      }
+    },
+    {
+      "i": 1,
+      "op_name": "SOL",
+      "args": {},
+      "raw": {
+        "seq_item": {
+          "index": 1,
+          "type": "Sketch",
+          "entity": "FcFzrEmktpLZLox_0"
+        },
+        "ent": {
+          "transform": {
+            "origin": {
+              "y": 0.0,
+              "x": 0.0,
+              "z": 0.0
+            },
+            "y_axis": {
+              "y": 1.0,
+              "x": 0.0,
+              "z": 0.0
+            },
+            "x_axis": {
+              "y": 0.0,
+              "x": 1.0,
+              "z": 0.0
+            },
+            "z_axis": {
+              "y": 0.0,
+              "x": 0.0,
+              "z": 1.0
+            }
+          },
+          "type": "Sketch",
+          "name": "Sketch 2",
+          "profiles": {
+            "JHC": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": 0.02610676,
+                        "x": -0.04767808,
+                        "z": 0.0
+                      },
+                      "curve": "JHB",
+                      "end_point": {
+                        "y": 0.02610676,
+                        "x": 0.06662192,
+                        "z": 0.0
+                      }
+                    },
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": 0.02610676,
+                        "x": 0.06662192,
+                        "z": 0.0
+                      },
+                      "curve": "JHN",
+                      "end_point": {
+                        "y": -0.05009324,
+                        "x": 0.06662192,
+                        "z": 0.0
+                      }
+                    },
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": -0.05009324,
+                        "x": -0.04767808,
+                        "z": 0.0
+                      },
+                      "curve": "JHF",
+                      "end_point": {
+                        "y": -0.05009324,
+                        "x": 0.06662192,
+                        "z": 0.0
+                      }
+                    },
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": 0.02610676,
+                        "x": -0.04767808,
+                        "z": 0.0
+                      },
+                      "curve": "JHJ",
+                      "end_point": {
+                        "y": -0.05009324,
+                        "x": -0.04767808,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            }
+          },
+          "reference_plane": {}
+        }
+      }
+    },
+    {
+      "i": 2,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          -47.678079999999994,
+          26.10676
+        ],
+        "p1": [
+          66.62192,
+          26.10676
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": 0.02610676,
+          "x": -0.04767808,
+          "z": 0.0
+        },
+        "curve": "JHB",
+        "end_point": {
+          "y": 0.02610676,
+          "x": 0.06662192,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 3,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          66.62192,
+          26.10676
+        ],
+        "p1": [
+          66.62192,
+          -50.093239999999994
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": 0.02610676,
+          "x": 0.06662192,
+          "z": 0.0
+        },
+        "curve": "JHN",
+        "end_point": {
+          "y": -0.05009324,
+          "x": 0.06662192,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 4,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          -47.678079999999994,
+          -50.093239999999994
+        ],
+        "p1": [
+          66.62192,
+          -50.093239999999994
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": -0.05009324,
+          "x": -0.04767808,
+          "z": 0.0
+        },
+        "curve": "JHF",
+        "end_point": {
+          "y": -0.05009324,
+          "x": 0.06662192,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 5,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          -47.678079999999994,
+          26.10676
+        ],
+        "p1": [
+          -47.678079999999994,
+          -50.093239999999994
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": 0.02610676,
+          "x": -0.04767808,
+          "z": 0.0
+        },
+        "curve": "JHJ",
+        "end_point": {
+          "y": -0.05009324,
+          "x": -0.04767808,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 6,
+      "op_name": "Extrude",
+      "args": {
+        "distance_mm": 7.62,
+        "op": "NewBody",
+        "sign": 1
+      },
+      "raw": {
+        "seq_item": {
+          "index": 2,
+          "type": "ExtrudeFeature",
+          "entity": "FT0yJYyk3pjP1oq_0"
+        },
+        "ent": {
+          "name": "Extrude 1",
+          "type": "ExtrudeFeature",
+          "profiles": [
+            {
+              "profile": "JHC",
+              "sketch": "FcFzrEmktpLZLox_0"
+            }
+          ],
+          "extent_two": {
+            "distance": {
+              "type": "ModelParameter",
+              "role": "AgainstDistance",
+              "name": "none",
+              "value": 0.0
+            },
+            "type": "DistanceExtentDefinition",
+            "taper_angle": {
+              "type": "ModelParameter",
+              "role": "Side2TaperAngle",
+              "name": "none",
+              "value": 0.0
+            }
+          },
+          "extent_one": {
+            "distance": {
+              "type": "ModelParameter",
+              "role": "AlongDistance",
+              "name": "none",
+              "value": 0.00762
+            },
+            "type": "DistanceExtentDefinition",
+            "taper_angle": {
+              "type": "ModelParameter",
+              "role": "TaperAngle",
+              "name": "none",
+              "value": 0.0
+            }
+          },
+          "operation": "NewBodyFeatureOperation",
+          "start_extent": {
+            "type": "ProfilePlaneStartDefinition"
+          },
+          "extent_type": "OneSideFeatureExtentType"
+        }
+      }
+    },
+    {
+      "i": 7,
+      "op_name": "SOL",
+      "args": {},
+      "raw": {
+        "seq_item": {
+          "index": 3,
+          "type": "Sketch",
+          "entity": "F7PcNhzuyJje9iW_1"
+        },
+        "ent": {
+          "transform": {
+            "origin": {
+              "y": -0.01199324,
+              "x": 0.00947192,
+              "z": 0.0
+            },
+            "y_axis": {
+              "y": -1.0,
+              "x": 0.0,
+              "z": 0.0
+            },
+            "x_axis": {
+              "y": 0.0,
+              "x": 1.0,
+              "z": 0.0
+            },
+            "z_axis": {
+              "y": 0.0,
+              "x": 0.0,
+              "z": -1.0
+            }
+          },
+          "type": "Sketch",
+          "name": "Sketch 3",
+          "profiles": {
+            "JKG": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": 0.033655,
+                        "x": -0.052705,
+                        "z": 0.0
+                      },
+                      "curve": "JKR",
+                      "end_point": {
+                        "y": -0.033655,
+                        "x": -0.052705,
+                        "z": 0.0
+                      }
+                    },
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": -0.033655,
+                        "x": -0.052705,
+                        "z": 0.0
+                      },
+                      "curve": "JKV",
+                      "end_point": {
+                        "y": -0.033655,
+                        "x": 0.052704999999999995,
+                        "z": 0.0
+                      }
+                    },
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": -0.033655,
+                        "x": 0.052704999999999995,
+                        "z": 0.0
+                      },
+                      "curve": "JKZ",
+                      "end_point": {
+                        "y": 0.033655,
+                        "x": 0.052704999999999995,
+                        "z": 0.0
+                      }
+                    },
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": 0.033655,
+                        "x": -0.052705,
+                        "z": 0.0
+                      },
+                      "curve": "JKd",
+                      "end_point": {
+                        "y": 0.033655,
+                        "x": 0.052704999999999995,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            }
+          },
+          "reference_plane": {}
+        }
+      }
+    },
+    {
+      "i": 8,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          -52.705,
+          33.654999999999994
+        ],
+        "p1": [
+          -52.705,
+          -33.654999999999994
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": 0.033655,
+          "x": -0.052705,
+          "z": 0.0
+        },
+        "curve": "JKR",
+        "end_point": {
+          "y": -0.033655,
+          "x": -0.052705,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 9,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          -52.705,
+          -33.654999999999994
+        ],
+        "p1": [
+          52.705,
+          -33.654999999999994
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": -0.033655,
+          "x": -0.052705,
+          "z": 0.0
+        },
+        "curve": "JKV",
+        "end_point": {
+          "y": -0.033655,
+          "x": 0.052704999999999995,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 10,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          52.705,
+          -33.654999999999994
+        ],
+        "p1": [
+          52.705,
+          33.654999999999994
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": -0.033655,
+          "x": 0.052704999999999995,
+          "z": 0.0
+        },
+        "curve": "JKZ",
+        "end_point": {
+          "y": 0.033655,
+          "x": 0.052704999999999995,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 11,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          -52.705,
+          33.654999999999994
+        ],
+        "p1": [
+          52.705,
+          33.654999999999994
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": 0.033655,
+          "x": -0.052705,
+          "z": 0.0
+        },
+        "curve": "JKd",
+        "end_point": {
+          "y": 0.033655,
+          "x": 0.052704999999999995,
+          "z": 0.0
+        }
+      }
+    }
+  ]
+}

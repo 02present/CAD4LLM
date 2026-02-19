@@ -1,0 +1,136 @@
+{
+  "schema": "cad_neutral.v0.1",
+  "meta": {
+    "source": "WHUCAD",
+    "sample_id": "0035/00050781",
+    "units": "mm",
+    "input_relpath": "0035/00050781.h5"
+  },
+  "sequence": [
+    {
+      "id": "F1",
+      "type": "Sketch",
+      "name": "Sketch 1",
+      "plane": {
+        "kind": "XY"
+      },
+      "entities": [
+        {
+          "id": "E1",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            0.0,
+            0.0
+          ],
+          "p1": [
+            76.0,
+            10.0
+          ]
+        },
+        {
+          "id": "E2",
+          "kind": "Arc",
+          "is_construction": false,
+          "p0": [
+            76.0,
+            10.0
+          ],
+          "p1": [
+            76.0,
+            28.0
+          ]
+        },
+        {
+          "id": "E3",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            76.0,
+            28.0
+          ],
+          "p1": [
+            38.0,
+            28.0
+          ]
+        },
+        {
+          "id": "E4",
+          "kind": "Arc",
+          "is_construction": false,
+          "p0": [
+            38.0,
+            28.0
+          ],
+          "p1": [
+            38.0,
+            10.0
+          ]
+        }
+      ],
+      "summary": {
+        "n_lines": 2,
+        "n_arcs": 2,
+        "n_circles": 0,
+        "n_entities": 4,
+        "bbox": [
+          0.0,
+          0.0,
+          76.0,
+          28.0
+        ]
+      }
+    },
+    {
+      "id": "F2",
+      "type": "Revolve",
+      "name": "Revolve 1",
+      "sketch_ref": "F1"
+    },
+    {
+      "id": "F3",
+      "type": "Sketch",
+      "name": "Sketch 2",
+      "plane": {
+        "kind": "XY"
+      },
+      "entities": [
+        {
+          "id": "E1",
+          "kind": "Circle",
+          "is_construction": false,
+          "center": [
+            48.0,
+            0.0
+          ],
+          "radius": 24.0
+        }
+      ],
+      "summary": {
+        "n_lines": 0,
+        "n_arcs": 0,
+        "n_circles": 1,
+        "n_entities": 1,
+        "bbox": [
+          24.0,
+          -24.0,
+          72.0,
+          24.0
+        ]
+      }
+    },
+    {
+      "id": "F4",
+      "type": "Extrude",
+      "name": "Extrude 1",
+      "sketch_ref": "F3",
+      "distance_mm": 51.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "NewBody",
+      "end_condition": "Blind"
+    }
+  ]
+}

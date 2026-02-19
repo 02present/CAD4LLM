@@ -1,0 +1,117 @@
+{
+  "schema": "cad_neutral.v0.1",
+  "meta": {
+    "source": "WHUCAD",
+    "sample_id": "0017/00024962",
+    "units": "mm",
+    "input_relpath": "0017/00024962.h5"
+  },
+  "sequence": [
+    {
+      "id": "F1",
+      "type": "Sketch",
+      "name": "Sketch 1",
+      "plane": {
+        "kind": "XY"
+      },
+      "entities": [
+        {
+          "id": "E1",
+          "kind": "Circle",
+          "is_construction": false,
+          "center": [
+            48.0,
+            0.0
+          ],
+          "radius": 41.0
+        }
+      ],
+      "summary": {
+        "n_lines": 0,
+        "n_arcs": 0,
+        "n_circles": 1,
+        "n_entities": 1,
+        "bbox": [
+          7.0,
+          -41.0,
+          89.0,
+          41.0
+        ]
+      }
+    },
+    {
+      "id": "F2",
+      "type": "Extrude",
+      "name": "Extrude 1",
+      "sketch_ref": "F1",
+      "distance_mm": 96.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "NewBody",
+      "end_condition": "Blind"
+    },
+    {
+      "id": "F3",
+      "type": "Sketch",
+      "name": "Sketch 2",
+      "plane": {
+        "kind": "XY"
+      },
+      "entities": [
+        {
+          "id": "E1",
+          "kind": "Arc",
+          "is_construction": false,
+          "p0": [
+            0.0,
+            0.0
+          ],
+          "p1": [
+            95.0,
+            0.0
+          ]
+        },
+        {
+          "id": "E2",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            95.0,
+            0.0
+          ],
+          "p1": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "summary": {
+        "n_lines": 1,
+        "n_arcs": 1,
+        "n_circles": 0,
+        "n_entities": 2,
+        "bbox": [
+          0.0,
+          0.0,
+          95.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "F4",
+      "type": "Extrude",
+      "name": "Extrude 2",
+      "sketch_ref": "F3",
+      "distance_mm": 32.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "NewBody",
+      "end_condition": "Blind"
+    }
+  ]
+}

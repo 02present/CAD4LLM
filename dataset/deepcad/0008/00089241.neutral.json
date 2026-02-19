@@ -1,0 +1,3559 @@
+{
+  "schema": "cad_neutral.v0.1",
+  "meta": {
+    "source": "DeepCAD",
+    "sample_id": "0008/00089241",
+    "units": "mm",
+    "convert_logs": [
+      "entity_lookup: found 3 entities",
+      "detected: dict['sequence'] list"
+    ],
+    "input_relpath": "0008/00089241.json"
+  },
+  "sequence": [
+    {
+      "id": "F1",
+      "type": "Sketch",
+      "name": "Sketch 1",
+      "plane": {
+        "kind": "XY",
+        "ref": null
+      },
+      "entities": [
+        {
+          "id": "E1",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -437.5,
+            300.0
+          ],
+          "p1": [
+            437.5,
+            300.0
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                -437.5,
+                300.0
+              ],
+              "p1": [
+                437.5,
+                300.0
+              ]
+            }
+          }
+        },
+        {
+          "id": "E2",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            437.5,
+            300.0
+          ],
+          "p1": [
+            437.5,
+            -300.0
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                437.5,
+                300.0
+              ],
+              "p1": [
+                437.5,
+                -300.0
+              ]
+            }
+          }
+        },
+        {
+          "id": "E3",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -437.5,
+            -300.0
+          ],
+          "p1": [
+            437.5,
+            -300.0
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                -437.5,
+                -300.0
+              ],
+              "p1": [
+                437.5,
+                -300.0
+              ]
+            }
+          }
+        },
+        {
+          "id": "E4",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -437.5,
+            300.0
+          ],
+          "p1": [
+            -437.5,
+            -300.0
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "p0": [
+                -437.5,
+                300.0
+              ],
+              "p1": [
+                -437.5,
+                -300.0
+              ]
+            }
+          }
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 4,
+        "n_arcs": 0,
+        "n_circles": 0,
+        "n_entities": 4,
+        "bbox": [
+          -437.5,
+          -300.0,
+          437.5,
+          300.0
+        ],
+        "loops": null
+      },
+      "raw": {
+        "ops": [
+          {
+            "i": 0,
+            "op": "SOL",
+            "args": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": "F2",
+      "type": "Extrude",
+      "name": "Extrude 1",
+      "sketch_ref": "F1",
+      "distance_mm": 15.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "NewBody",
+      "end_condition": "Blind",
+      "raw": {
+        "op_name": "Extrude",
+        "args": {
+          "distance_mm": 15.0,
+          "op": "NewBody",
+          "sign": 1
+        },
+        "raw": {
+          "seq_item": {
+            "index": 1,
+            "type": "ExtrudeFeature",
+            "entity": "FCmGGAEQyrmG3RW_0"
+          },
+          "ent": {
+            "name": "Extrude 1",
+            "type": "ExtrudeFeature",
+            "profiles": [
+              {
+                "profile": "JGC",
+                "sketch": "F66QM9PayEV3uz9_0"
+              }
+            ],
+            "extent_two": {
+              "distance": {
+                "type": "ModelParameter",
+                "role": "AgainstDistance",
+                "name": "none",
+                "value": 0.0
+              },
+              "type": "DistanceExtentDefinition",
+              "taper_angle": {
+                "type": "ModelParameter",
+                "role": "Side2TaperAngle",
+                "name": "none",
+                "value": 0.0
+              }
+            },
+            "extent_one": {
+              "distance": {
+                "type": "ModelParameter",
+                "role": "AlongDistance",
+                "name": "none",
+                "value": 0.015
+              },
+              "type": "DistanceExtentDefinition",
+              "taper_angle": {
+                "type": "ModelParameter",
+                "role": "TaperAngle",
+                "name": "none",
+                "value": 0.0
+              }
+            },
+            "operation": "NewBodyFeatureOperation",
+            "start_extent": {
+              "type": "ProfilePlaneStartDefinition"
+            },
+            "extent_type": "OneSideFeatureExtentType"
+          }
+        }
+      }
+    },
+    {
+      "id": "F3",
+      "type": "Sketch",
+      "name": "Sketch 2",
+      "plane": {
+        "kind": "FaceRef",
+        "ref": "FaceRef:F2:end"
+      },
+      "entities": [
+        {
+          "id": "E5",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            37.5,
+            100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                37.5,
+                100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E6",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -262.5,
+            0.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -262.5,
+                0.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E7",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -162.5,
+            200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -162.5,
+                200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E8",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            137.5,
+            -200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                137.5,
+                -200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E9",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            137.5,
+            -100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                137.5,
+                -100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E10",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            37.5,
+            200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                37.5,
+                200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E11",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -262.5,
+            -100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -262.5,
+                -100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E12",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -162.5,
+            100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -162.5,
+                100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E13",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            37.5,
+            -100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                37.5,
+                -100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E14",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -262.5,
+            -200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -262.5,
+                -200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E15",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -162.5,
+            0.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -162.5,
+                0.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E16",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -162.5,
+            -200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -162.5,
+                -200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E17",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -262.5,
+            200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -262.5,
+                200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E18",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            37.5,
+            -200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                37.5,
+                -200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E19",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -362.5,
+            200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -362.5,
+                200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E20",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -162.5,
+            -100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -162.5,
+                -100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E21",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -62.5,
+            200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -62.5,
+                200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E22",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -362.5,
+            100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -362.5,
+                100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E23",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -262.5,
+            100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -262.5,
+                100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E24",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -62.5,
+            100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -62.5,
+                100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E25",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -362.5,
+            0.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -362.5,
+                0.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E26",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            137.5,
+            0.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                137.5,
+                0.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E27",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            137.5,
+            100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                137.5,
+                100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E28",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            137.5,
+            200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                137.5,
+                200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E29",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            237.5,
+            -200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                237.5,
+                -200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E30",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            237.5,
+            -100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                237.5,
+                -100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E31",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            237.5,
+            0.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                237.5,
+                0.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E32",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            237.5,
+            100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                237.5,
+                100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E33",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -62.5,
+            0.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -62.5,
+                0.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E34",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -362.5,
+            -100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -362.5,
+                -100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E35",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            237.5,
+            200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                237.5,
+                200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E36",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -62.5,
+            -100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -62.5,
+                -100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E37",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -362.5,
+            -200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -362.5,
+                -200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E38",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            337.5,
+            -200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                337.5,
+                -200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E39",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            337.5,
+            -100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                337.5,
+                -100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E40",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            337.5,
+            0.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                337.5,
+                0.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E41",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            337.5,
+            100.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                337.5,
+                100.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E42",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            37.5,
+            0.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                37.5,
+                0.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E43",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            337.5,
+            200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                337.5,
+                200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        },
+        {
+          "id": "E44",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -62.5,
+            -200.0
+          ],
+          "radius": 10.0,
+          "a0": null,
+          "a1": null,
+          "raw": {
+            "args": {
+              "center": [
+                -62.5,
+                -200.0
+              ],
+              "radius": 10.0
+            }
+          }
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 0,
+        "n_arcs": 0,
+        "n_circles": 40,
+        "n_entities": 40,
+        "bbox": [
+          -372.5,
+          -210.0,
+          347.5,
+          210.0
+        ],
+        "loops": null
+      },
+      "raw": {
+        "ops": [
+          {
+            "i": 6,
+            "op": "SOL",
+            "args": {}
+          }
+        ]
+      }
+    }
+  ],
+  "raw_ops": [
+    {
+      "i": 0,
+      "op_name": "SOL",
+      "args": {},
+      "raw": {
+        "seq_item": {
+          "index": 0,
+          "type": "Sketch",
+          "entity": "F66QM9PayEV3uz9_0"
+        },
+        "ent": {
+          "transform": {
+            "origin": {
+              "y": 0.0,
+              "x": 0.0,
+              "z": 0.0
+            },
+            "y_axis": {
+              "y": 0.0,
+              "x": -0.0,
+              "z": 1.0
+            },
+            "x_axis": {
+              "y": 0.0,
+              "x": 1.0,
+              "z": 0.0
+            },
+            "z_axis": {
+              "y": -1.0,
+              "x": 0.0,
+              "z": 0.0
+            }
+          },
+          "type": "Sketch",
+          "name": "Sketch 1",
+          "profiles": {
+            "JGC": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": 0.3,
+                        "x": -0.4375,
+                        "z": 0.0
+                      },
+                      "curve": "JGB",
+                      "end_point": {
+                        "y": 0.3,
+                        "x": 0.4375,
+                        "z": 0.0
+                      }
+                    },
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": 0.3,
+                        "x": 0.4375,
+                        "z": 0.0
+                      },
+                      "curve": "JGN",
+                      "end_point": {
+                        "y": -0.3,
+                        "x": 0.4375,
+                        "z": 0.0
+                      }
+                    },
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": -0.3,
+                        "x": -0.4375,
+                        "z": 0.0
+                      },
+                      "curve": "JGF",
+                      "end_point": {
+                        "y": -0.3,
+                        "x": 0.4375,
+                        "z": 0.0
+                      }
+                    },
+                    {
+                      "type": "Line3D",
+                      "start_point": {
+                        "y": 0.3,
+                        "x": -0.4375,
+                        "z": 0.0
+                      },
+                      "curve": "JGJ",
+                      "end_point": {
+                        "y": -0.3,
+                        "x": -0.4375,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            }
+          },
+          "reference_plane": {}
+        }
+      }
+    },
+    {
+      "i": 1,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          -437.5,
+          300.0
+        ],
+        "p1": [
+          437.5,
+          300.0
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": 0.3,
+          "x": -0.4375,
+          "z": 0.0
+        },
+        "curve": "JGB",
+        "end_point": {
+          "y": 0.3,
+          "x": 0.4375,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 2,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          437.5,
+          300.0
+        ],
+        "p1": [
+          437.5,
+          -300.0
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": 0.3,
+          "x": 0.4375,
+          "z": 0.0
+        },
+        "curve": "JGN",
+        "end_point": {
+          "y": -0.3,
+          "x": 0.4375,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 3,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          -437.5,
+          -300.0
+        ],
+        "p1": [
+          437.5,
+          -300.0
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": -0.3,
+          "x": -0.4375,
+          "z": 0.0
+        },
+        "curve": "JGF",
+        "end_point": {
+          "y": -0.3,
+          "x": 0.4375,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 4,
+      "op_name": "Line",
+      "args": {
+        "p0": [
+          -437.5,
+          300.0
+        ],
+        "p1": [
+          -437.5,
+          -300.0
+        ]
+      },
+      "raw": {
+        "type": "Line3D",
+        "start_point": {
+          "y": 0.3,
+          "x": -0.4375,
+          "z": 0.0
+        },
+        "curve": "JGJ",
+        "end_point": {
+          "y": -0.3,
+          "x": -0.4375,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 5,
+      "op_name": "Extrude",
+      "args": {
+        "distance_mm": 15.0,
+        "op": "NewBody",
+        "sign": 1
+      },
+      "raw": {
+        "seq_item": {
+          "index": 1,
+          "type": "ExtrudeFeature",
+          "entity": "FCmGGAEQyrmG3RW_0"
+        },
+        "ent": {
+          "name": "Extrude 1",
+          "type": "ExtrudeFeature",
+          "profiles": [
+            {
+              "profile": "JGC",
+              "sketch": "F66QM9PayEV3uz9_0"
+            }
+          ],
+          "extent_two": {
+            "distance": {
+              "type": "ModelParameter",
+              "role": "AgainstDistance",
+              "name": "none",
+              "value": 0.0
+            },
+            "type": "DistanceExtentDefinition",
+            "taper_angle": {
+              "type": "ModelParameter",
+              "role": "Side2TaperAngle",
+              "name": "none",
+              "value": 0.0
+            }
+          },
+          "extent_one": {
+            "distance": {
+              "type": "ModelParameter",
+              "role": "AlongDistance",
+              "name": "none",
+              "value": 0.015
+            },
+            "type": "DistanceExtentDefinition",
+            "taper_angle": {
+              "type": "ModelParameter",
+              "role": "TaperAngle",
+              "name": "none",
+              "value": 0.0
+            }
+          },
+          "operation": "NewBodyFeatureOperation",
+          "start_extent": {
+            "type": "ProfilePlaneStartDefinition"
+          },
+          "extent_type": "OneSideFeatureExtentType"
+        }
+      }
+    },
+    {
+      "i": 6,
+      "op_name": "SOL",
+      "args": {},
+      "raw": {
+        "seq_item": {
+          "index": 2,
+          "type": "Sketch",
+          "entity": "FjGh4xuuu5H0nKD_1"
+        },
+        "ent": {
+          "transform": {
+            "origin": {
+              "y": 0.0,
+              "x": 0.0,
+              "z": -0.0
+            },
+            "y_axis": {
+              "y": -0.0,
+              "x": 0.0,
+              "z": 1.0
+            },
+            "x_axis": {
+              "y": 0.0,
+              "x": -1.0,
+              "z": 0.0
+            },
+            "z_axis": {
+              "y": 1.0,
+              "x": 0.0,
+              "z": 0.0
+            }
+          },
+          "type": "Sketch",
+          "name": "Sketch 2",
+          "profiles": {
+            "KJCB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.1,
+                        "x": 0.0375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJBB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJCC": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.0,
+                        "x": -0.2625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJBC",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJmB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.2,
+                        "x": -0.1625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJlB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJ6": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.2,
+                        "x": 0.1375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJ5",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJ2": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.1,
+                        "x": 0.1375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJ1",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJ+": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.2,
+                        "x": 0.0375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJ9",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJGC": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.1,
+                        "x": -0.2625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJFC",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJqB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.1,
+                        "x": -0.1625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJpB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJKB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.1,
+                        "x": 0.0375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJJB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJKC": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.2,
+                        "x": -0.2625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJJC",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJuB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.0,
+                        "x": -0.1625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJtB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJ2B": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.2,
+                        "x": -0.1625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJ1B",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJ6B": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.2,
+                        "x": -0.2625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJ5B",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJOB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.2,
+                        "x": 0.0375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJNB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJOC": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.2,
+                        "x": -0.3625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJNC",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJyB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.1,
+                        "x": -0.1625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJxB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJSB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.2,
+                        "x": -0.0625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJRB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJSC": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.1,
+                        "x": -0.3625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJRC",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJ+B": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.1,
+                        "x": -0.2625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJ9B",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJWB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.1,
+                        "x": -0.0625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJVB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJWC": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.0,
+                        "x": -0.3625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJVC",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJy": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.0,
+                        "x": 0.1375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJx",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJu": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.1,
+                        "x": 0.1375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJt",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJq": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.2,
+                        "x": 0.1375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJp",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJm": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.2,
+                        "x": 0.2375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJl",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJi": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.1,
+                        "x": 0.2375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJh",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJe": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.0,
+                        "x": 0.2375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJd",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJa": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.1,
+                        "x": 0.2375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJZ",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJaB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.0,
+                        "x": -0.0625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJZB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJaC": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.1,
+                        "x": -0.3625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJZC",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJW": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.2,
+                        "x": 0.2375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJV",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJeB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.1,
+                        "x": -0.0625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJdB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJeC": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.2,
+                        "x": -0.3625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJdC",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJS": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.2,
+                        "x": 0.3375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJR",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJO": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.1,
+                        "x": 0.3375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJN",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJK": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.0,
+                        "x": 0.3375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJJ",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJG": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.1,
+                        "x": 0.3375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJF",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJGB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.0,
+                        "x": 0.0375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJFB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "JJC": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": 0.2,
+                        "x": 0.3375,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "JJB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            },
+            "KJiB": {
+              "loops": [
+                {
+                  "is_outer": true,
+                  "profile_curves": [
+                    {
+                      "center_point": {
+                        "y": -0.2,
+                        "x": -0.0625,
+                        "z": 0.0
+                      },
+                      "type": "Circle3D",
+                      "radius": 0.01,
+                      "curve": "KJhB",
+                      "normal": {
+                        "y": 1.0,
+                        "x": 0.0,
+                        "z": 0.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "properties": {}
+            }
+          },
+          "reference_plane": {}
+        }
+      }
+    },
+    {
+      "i": 7,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          37.5,
+          100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.1,
+          "x": 0.0375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJBB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 8,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -262.5,
+          0.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.0,
+          "x": -0.2625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJBC",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 9,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -162.5,
+          200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.2,
+          "x": -0.1625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJlB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 10,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          137.5,
+          -200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.2,
+          "x": 0.1375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJ5",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 11,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          137.5,
+          -100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.1,
+          "x": 0.1375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJ1",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 12,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          37.5,
+          200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.2,
+          "x": 0.0375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJ9",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 13,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -262.5,
+          -100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.1,
+          "x": -0.2625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJFC",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 14,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -162.5,
+          100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.1,
+          "x": -0.1625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJpB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 15,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          37.5,
+          -100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.1,
+          "x": 0.0375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJJB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 16,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -262.5,
+          -200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.2,
+          "x": -0.2625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJJC",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 17,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -162.5,
+          0.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.0,
+          "x": -0.1625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJtB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 18,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -162.5,
+          -200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.2,
+          "x": -0.1625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJ1B",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 19,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -262.5,
+          200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.2,
+          "x": -0.2625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJ5B",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 20,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          37.5,
+          -200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.2,
+          "x": 0.0375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJNB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 21,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -362.5,
+          200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.2,
+          "x": -0.3625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJNC",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 22,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -162.5,
+          -100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.1,
+          "x": -0.1625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJxB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 23,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -62.5,
+          200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.2,
+          "x": -0.0625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJRB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 24,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -362.5,
+          100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.1,
+          "x": -0.3625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJRC",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 25,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -262.5,
+          100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.1,
+          "x": -0.2625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJ9B",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 26,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -62.5,
+          100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.1,
+          "x": -0.0625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJVB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 27,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -362.5,
+          0.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.0,
+          "x": -0.3625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJVC",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 28,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          137.5,
+          0.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.0,
+          "x": 0.1375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJx",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 29,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          137.5,
+          100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.1,
+          "x": 0.1375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJt",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 30,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          137.5,
+          200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.2,
+          "x": 0.1375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJp",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 31,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          237.5,
+          -200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.2,
+          "x": 0.2375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJl",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 32,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          237.5,
+          -100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.1,
+          "x": 0.2375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJh",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 33,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          237.5,
+          0.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.0,
+          "x": 0.2375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJd",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 34,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          237.5,
+          100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.1,
+          "x": 0.2375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJZ",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 35,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -62.5,
+          0.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.0,
+          "x": -0.0625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJZB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 36,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -362.5,
+          -100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.1,
+          "x": -0.3625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJZC",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 37,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          237.5,
+          200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.2,
+          "x": 0.2375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJV",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 38,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -62.5,
+          -100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.1,
+          "x": -0.0625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJdB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 39,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -362.5,
+          -200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.2,
+          "x": -0.3625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJdC",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 40,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          337.5,
+          -200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.2,
+          "x": 0.3375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJR",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 41,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          337.5,
+          -100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.1,
+          "x": 0.3375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJN",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 42,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          337.5,
+          0.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.0,
+          "x": 0.3375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJJ",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 43,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          337.5,
+          100.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.1,
+          "x": 0.3375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJF",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 44,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          37.5,
+          0.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.0,
+          "x": 0.0375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJFB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 45,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          337.5,
+          200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": 0.2,
+          "x": 0.3375,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "JJB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "i": 46,
+      "op_name": "Circle",
+      "args": {
+        "center": [
+          -62.5,
+          -200.0
+        ],
+        "radius": 10.0
+      },
+      "raw": {
+        "center_point": {
+          "y": -0.2,
+          "x": -0.0625,
+          "z": 0.0
+        },
+        "type": "Circle3D",
+        "radius": 0.01,
+        "curve": "KJhB",
+        "normal": {
+          "y": 1.0,
+          "x": 0.0,
+          "z": 0.0
+        }
+      }
+    }
+  ]
+}

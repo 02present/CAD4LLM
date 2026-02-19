@@ -1,0 +1,1317 @@
+{
+  "schema": "cad_ir.v0.1",
+  "meta": {
+    "source": "DeepCAD",
+    "sample_id": "0067/00674481",
+    "units": "mm",
+    "convert_logs": [
+      "entity_lookup: found 8 entities",
+      "detected: dict['sequence'] list"
+    ],
+    "input_relpath": "0067/00674481.json"
+  },
+  "sequence": [
+    {
+      "id": "F1",
+      "type": "Sketch",
+      "name": "Sketch 1",
+      "plane": {
+        "kind": "XY",
+        "ref": null
+      },
+      "entities": [
+        {
+          "id": "E1",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            30.052039999999998,
+            30.052039999999998
+          ],
+          "radius": 3.75,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E2",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            30.052039999999998,
+            -30.052039999999998
+          ],
+          "radius": 3.75,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E3",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -30.052039999999998,
+            -30.052039999999998
+          ],
+          "radius": 3.75,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E4",
+          "kind": "Circle",
+          "is_construction": false,
+          "p0": null,
+          "p1": null,
+          "center": [
+            -30.052039999999998,
+            30.052039999999998
+          ],
+          "radius": 3.75,
+          "a0": null,
+          "a1": null
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 0,
+        "n_arcs": 0,
+        "n_circles": 4,
+        "n_entities": 4,
+        "bbox": [
+          -33.80204,
+          -33.80204,
+          33.80204,
+          33.80204
+        ],
+        "loops": null
+      }
+    },
+    {
+      "id": "F2",
+      "type": "Sketch",
+      "name": "Sketch 2",
+      "plane": {
+        "kind": "XY",
+        "ref": null
+      },
+      "entities": [
+        {
+          "id": "E5",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            6.07759,
+            23.609499999999997
+          ],
+          "p1": [
+            15.300229999999999,
+            43.61495
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E6",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            6.07759,
+            -23.609499999999997
+          ],
+          "p1": [
+            15.300229999999999,
+            -43.61495
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 2,
+        "n_arcs": 0,
+        "n_circles": 0,
+        "n_entities": 2,
+        "bbox": [
+          6.07759,
+          -43.61495,
+          15.300229999999999,
+          43.61495
+        ],
+        "loops": null
+      }
+    },
+    {
+      "id": "F3",
+      "type": "Extrude",
+      "name": "Extrude 1",
+      "sketch_ref": "F2",
+      "distance_mm": 3.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "NewBody",
+      "end_condition": "Blind"
+    },
+    {
+      "id": "F4",
+      "type": "Sketch",
+      "name": "Sketch 3",
+      "plane": {
+        "kind": "FaceRef",
+        "ref": "FaceRef:F3:end"
+      },
+      "entities": [],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 0,
+        "n_arcs": 0,
+        "n_circles": 0,
+        "n_entities": 0,
+        "bbox": null,
+        "loops": null
+      }
+    },
+    {
+      "id": "F5",
+      "type": "Extrude",
+      "name": "Extrude 2",
+      "sketch_ref": "F4",
+      "distance_mm": 25.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "Cut",
+      "end_condition": "Blind"
+    },
+    {
+      "id": "F6",
+      "type": "Sketch",
+      "name": "Sketch 4",
+      "plane": {
+        "kind": "FaceRef",
+        "ref": "FaceRef:F5:end"
+      },
+      "entities": [],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 0,
+        "n_arcs": 0,
+        "n_circles": 0,
+        "n_entities": 0,
+        "bbox": null,
+        "loops": null
+      }
+    },
+    {
+      "id": "F7",
+      "type": "Extrude",
+      "name": "Extrude 3",
+      "sketch_ref": "F6",
+      "distance_mm": -25.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "Cut",
+      "end_condition": "Blind"
+    },
+    {
+      "id": "F8",
+      "type": "Sketch",
+      "name": "Sketch 5",
+      "plane": {
+        "kind": "FaceRef",
+        "ref": "FaceRef:F7:end"
+      },
+      "entities": [
+        {
+          "id": "E7",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            0.8330400000000002,
+            -12.20529
+          ],
+          "p1": [
+            0.2299499999999996,
+            -11.94578
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E8",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            0.7342299999999989,
+            -12.43492
+          ],
+          "p1": [
+            0.13115999999999822,
+            -12.175419999999999
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E9",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            0.8330400000000002,
+            -12.20529
+          ],
+          "p1": [
+            0.7342299999999989,
+            -12.43492
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E10",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -0.37784000000000084,
+            -11.68425
+          ],
+          "p1": [
+            -0.47665000000000207,
+            -11.91388
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E11",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -0.47665000000000207,
+            -11.91388
+          ],
+          "p1": [
+            0.13115999999999822,
+            -12.175419999999999
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E12",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -0.37784000000000084,
+            -11.68425
+          ],
+          "p1": [
+            0.2299499999999996,
+            -11.94578
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E13",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -3.948710000000001,
+            17.88871
+          ],
+          "p1": [
+            -3.7998000000000025,
+            17.68792
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E14",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -3.7998000000000025,
+            17.68792
+          ],
+          "p1": [
+            -3.2683200000000014,
+            18.08208
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E15",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -3.948710000000001,
+            17.88871
+          ],
+          "p1": [
+            -3.41725,
+            18.282860000000003
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E16",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -10.06887,
+            -23.98269
+          ],
+          "p1": [
+            -10.169270000000001,
+            -24.05716
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E17",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -10.169270000000001,
+            -24.05716
+          ],
+          "p1": [
+            -9.775269999999999,
+            -24.588430000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E18",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -9.96847,
+            -23.90823
+          ],
+          "p1": [
+            -9.57446,
+            -24.439510000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E19",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -10.06887,
+            -23.98269
+          ],
+          "p1": [
+            -9.96847,
+            -23.90823
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E20",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            2.5134300000000005,
+            -7.05203
+          ],
+          "p1": [
+            1.8744999999999976,
+            -6.9009
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E21",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            2.455889999999999,
+            -7.2953
+          ],
+          "p1": [
+            1.8169799999999994,
+            -7.14418
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E22",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            2.5134300000000005,
+            -7.05203
+          ],
+          "p1": [
+            2.455889999999999,
+            -7.2953
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E23",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -5.052170000000002,
+            -21.26041
+          ],
+          "p1": [
+            -5.5305500000000025,
+            -20.81071
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E24",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -5.223390000000001,
+            -21.44255
+          ],
+          "p1": [
+            -5.701750000000002,
+            -20.99287
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E25",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -5.052170000000002,
+            -21.26041
+          ],
+          "p1": [
+            -5.223390000000001,
+            -21.44255
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E26",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            1.2305999999999984,
+            -6.748589999999999
+          ],
+          "p1": [
+            1.17306,
+            -6.99186
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E27",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            1.17306,
+            -6.99186
+          ],
+          "p1": [
+            1.8169799999999994,
+            -7.14418
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E28",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            1.2305999999999984,
+            -6.748589999999999
+          ],
+          "p1": [
+            1.8744999999999976,
+            -6.9009
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E29",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -2.889889999999999,
+            18.67396
+          ],
+          "p1": [
+            -3.41725,
+            18.282860000000003
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E30",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -2.7409800000000004,
+            18.47317
+          ],
+          "p1": [
+            -3.2683200000000014,
+            18.08208
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E31",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -2.889889999999999,
+            18.67396
+          ],
+          "p1": [
+            -2.7409800000000004,
+            18.47317
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E32",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -6.012650000000002,
+            -20.357509999999998
+          ],
+          "p1": [
+            -6.183870000000001,
+            -20.53966
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E33",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -6.183870000000001,
+            -20.53966
+          ],
+          "p1": [
+            -5.701750000000002,
+            -20.99287
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E34",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -6.012650000000002,
+            -20.357509999999998
+          ],
+          "p1": [
+            -5.5305500000000025,
+            -20.81071
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E35",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            3.2758700000000003,
+            -1.6856099999999998
+          ],
+          "p1": [
+            2.6204199999999984,
+            -1.6474300000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E36",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            3.2613299999999996,
+            -1.9351800000000001
+          ],
+          "p1": [
+            2.6059099999999993,
+            -1.8969900000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E37",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            3.2758700000000003,
+            -1.6856099999999998
+          ],
+          "p1": [
+            3.2613299999999996,
+            -1.9351800000000001
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E38",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            0.7199900000000002,
+            8.659419999999999
+          ],
+          "p1": [
+            0.791469999999999,
+            8.41987
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E39",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            0.791469999999999,
+            8.41987
+          ],
+          "p1": [
+            1.4255399999999994,
+            8.60906
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E40",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            0.7199900000000002,
+            8.659419999999999
+          ],
+          "p1": [
+            1.3540400000000008,
+            8.8486
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E41",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -1.7144900000000025,
+            -16.989620000000002
+          ],
+          "p1": [
+            -2.2635200000000015,
+            -16.62957
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E42",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -1.851580000000002,
+            -17.19866
+          ],
+          "p1": [
+            -2.400590000000001,
+            -16.838630000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E43",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -1.7144900000000025,
+            -16.989620000000002
+          ],
+          "p1": [
+            -1.851580000000002,
+            -17.19866
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E44",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            1.9598800000000007,
+            -1.6089399999999998
+          ],
+          "p1": [
+            1.9453400000000003,
+            -1.85851
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E45",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            1.9453400000000003,
+            -1.85851
+          ],
+          "p1": [
+            2.6059099999999993,
+            -1.8969900000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E46",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            1.9598800000000007,
+            -1.6089399999999998
+          ],
+          "p1": [
+            2.6204199999999984,
+            -1.6474300000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E47",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            3.097329999999999,
+            3.7317600000000004
+          ],
+          "p1": [
+            2.44517,
+            3.65584
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E48",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            3.1262300000000005,
+            3.48345
+          ],
+          "p1": [
+            2.4741,
+            3.4075300000000004
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E49",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            3.097329999999999,
+            3.7317600000000004
+          ],
+          "p1": [
+            3.1262300000000005,
+            3.48345
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E50",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -2.8168299999999995,
+            -16.26673
+          ],
+          "p1": [
+            -2.9539200000000023,
+            -16.47577
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E51",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -2.9539200000000023,
+            -16.47577
+          ],
+          "p1": [
+            -2.400590000000001,
+            -16.838630000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E52",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -2.8168299999999995,
+            -16.26673
+          ],
+          "p1": [
+            -2.2635200000000015,
+            -16.62957
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E53",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -1.2116900000000013,
+            13.47776
+          ],
+          "p1": [
+            -1.0998000000000014,
+            13.25421
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E54",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -1.0998000000000014,
+            13.25421
+          ],
+          "p1": [
+            -0.508080000000001,
+            13.55036
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E55",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -1.2116900000000013,
+            13.47776
+          ],
+          "p1": [
+            -0.6199900000000008,
+            13.773900000000001
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E56",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            1.9831899999999993,
+            9.03632
+          ],
+          "p1": [
+            1.3540400000000008,
+            8.8486
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E57",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            2.0546599999999997,
+            8.79677
+          ],
+          "p1": [
+            1.4255399999999994,
+            8.60906
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E58",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            1.9831899999999993,
+            9.03632
+          ],
+          "p1": [
+            2.0546599999999997,
+            8.79677
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E59",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            1.7879399999999983,
+            3.57933
+          ],
+          "p1": [
+            1.81684,
+            3.33102
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E60",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            1.81684,
+            3.33102
+          ],
+          "p1": [
+            2.4741,
+            3.4075300000000004
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E61",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            1.7879399999999983,
+            3.57933
+          ],
+          "p1": [
+            2.44517,
+            3.65584
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E62",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -9.479700000000001,
+            -24.98697
+          ],
+          "p1": [
+            -9.775269999999999,
+            -24.588430000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E63",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -9.2789,
+            -24.83804
+          ],
+          "p1": [
+            -9.57446,
+            -24.439510000000002
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E64",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -9.479700000000001,
+            -24.98697
+          ],
+          "p1": [
+            -9.2789,
+            -24.83804
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E65",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -0.03285999999999914,
+            14.06775
+          ],
+          "p1": [
+            -0.6199900000000008,
+            13.773900000000001
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E66",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            0.07901999999999909,
+            13.844199999999999
+          ],
+          "p1": [
+            -0.508080000000001,
+            13.55036
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        },
+        {
+          "id": "E67",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -0.03285999999999914,
+            14.06775
+          ],
+          "p1": [
+            0.07901999999999909,
+            13.844199999999999
+          ],
+          "center": null,
+          "radius": null,
+          "a0": null,
+          "a1": null
+        }
+      ],
+      "profiles": {
+        "loops": null
+      },
+      "summary": {
+        "n_lines": 61,
+        "n_arcs": 0,
+        "n_circles": 0,
+        "n_entities": 61,
+        "bbox": [
+          -10.169270000000001,
+          -24.98697,
+          3.2758700000000003,
+          18.67396
+        ],
+        "loops": null
+      }
+    },
+    {
+      "id": "F9",
+      "type": "Extrude",
+      "name": "Extrude 4",
+      "sketch_ref": "F8",
+      "distance_mm": -0.1,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "Cut",
+      "end_condition": "Blind"
+    }
+  ]
+}
