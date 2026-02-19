@@ -105,7 +105,6 @@ python3 qwen3_run_dneutral_h100_2.py --neutral_root <input_neutral_root> --out_r
 - `--temperature`: 생성 temperature 설정 (기본값: 0.35)
 - `--top_p`: 샘플링 비율 (기본값: 0.9)
 - `--top_k`: 샘플링 값 (기본값: 60)
-- 
 ---
 
 ## 사용 예시
