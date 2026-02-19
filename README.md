@@ -5,7 +5,7 @@
 
 `/Qwen` : LLM 관련 작업 디렉토리
 
-`/converte` : 중립포맷으로 변환하는데 사용하는 converter (하단 설명 참조)
+`/converter` : 중립포맷으로 변환하는데 사용하는 converter (하단 설명 참조)
 
 `/dataset` : 최종 출력된 중립포맷(Neutral)과 UserPrompt 디렉토리 (최종 데이터셋 폴더)
 
