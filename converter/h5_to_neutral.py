@@ -8,7 +8,7 @@
 # single
 #   python3 whucad_vec_to_neutral.py \
 #     --in_h5 /home/hj2/Desktop/WHUCAD/data/vec/0002/00002839.h5 \
-#     --out_json /tmp/00002839.ir.json
+#     --out_json /tmp/00002839.neutral.json
 
 from __future__ import annotations
 
@@ -473,7 +473,7 @@ def dump_json(path: Path, obj: Dict[str, Any]) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--in_h5", type=str, default="", help="single input .h5")
-    ap.add_argument("--out_json", type=str, default="", help="single output .ir.json")
+    ap.add_argument("--out_json", type=str, default="", help="single output .neutral.json")
     ap.add_argument("--in_root", type=str, default="", help="batch input root")
     ap.add_argument("--out_root", type=str, default="", help="batch output root")
     ap.add_argument("--glob", type=str, default="**/*.h5", help="glob under in_root")
@@ -491,7 +491,7 @@ def main() -> None:
     if args.in_h5:
         in_h5 = Path(args.in_h5)
         vec = read_vec_h5(in_h5, dataset=args.dataset)
-        out_json = Path(args.out_json) if args.out_json else in_h5.with_suffix(".ir.json")
+        out_json = Path(args.out_json) if args.out_json else in_h5.with_suffix(".neutral.json")
 
         sample_id = f"{in_h5.parent.name}/{in_h5.stem}"
 
@@ -522,7 +522,7 @@ def main() -> None:
         for p in paths:
             try:
                 rel = p.relative_to(in_root)
-                out_path = (out_root / rel).with_suffix(".ir.json")
+                out_path = (out_root / rel).with_suffix(".neutral.json")
                 vec = read_vec_h5(p, dataset=args.dataset)
                 sample_id = f"{rel.parent.as_posix()}/{p.stem}"
 

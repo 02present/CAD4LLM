@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import argparse, h5py, numpy as np
 
 def main():

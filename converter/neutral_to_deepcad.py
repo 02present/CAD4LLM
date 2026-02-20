@@ -1,5 +1,5 @@
 #   python3 ir_to_deepcad_json_rich.py --root input_ir_dir --out_dir out_json_dir
-#   python3 ir_to_deepcad_json_rich.py --root one.ir.json --out_dir out_json_dir
+#   python3 ir_to_deepcad_json_rich.py --root one.neutral.json --out_dir out_json_dir
 
 
 from __future__ import annotations
@@ -303,13 +303,13 @@ def dump_json(p: Path, obj: Any):
 def iter_ir_files(root: Path) -> List[Path]:
     if root.is_file():
         return [root]
-    return sorted(root.rglob("*.ir.json"))
+    return sorted(root.rglob("*.neutral.json"))
 
 
 def make_out_path(root: Path, out_dir: Path, in_path: Path) -> Path:
     if root.is_file():
         name = in_path.name
-        if name.endswith(".ir.json"):
+        if name.endswith(".neutral.json"):
             name = name[:-7] + ".json"
         else:
             name = in_path.stem + ".json"
@@ -317,7 +317,7 @@ def make_out_path(root: Path, out_dir: Path, in_path: Path) -> Path:
 
     rel = in_path.relative_to(root)
     name = rel.name
-    if name.endswith(".ir.json"):
+    if name.endswith(".neutral.json"):
         name = name[:-7] + ".json"
     else:
         name = rel.stem + ".json"
@@ -326,7 +326,7 @@ def make_out_path(root: Path, out_dir: Path, in_path: Path) -> Path:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--root", required=True, help="IR file (*.ir.json) or directory containing them")
+    ap.add_argument("--root", required=True, help="IR file (*.neutral.json) or directory containing them")
     ap.add_argument("--out_dir", required=True, help="output directory")
     ap.add_argument("--coord_inv", type=float, default=0.001, help="IR(mm)*coord_inv => DeepCAD units (default mm->m)")
     ap.add_argument("--dry_run", action="store_true")

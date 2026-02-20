@@ -21,12 +21,6 @@ records = []
 stats = {}
 
 def find_prompt(prompt_dir: Path, neutral_path: Path) -> Path | None:
-    """
-    Neutral: xxx.neutral.json
-    Prompt candidates:
-      1) xxx.neutral.prompt.txt   (DeepCAD)
-      2) xxx_prompt.txt           (WHUCAD old)
-    """
     stem = neutral_path.stem
 
     candidates = [

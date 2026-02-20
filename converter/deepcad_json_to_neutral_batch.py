@@ -413,7 +413,7 @@ def main():
                 strip_keys_inplace(ir_dict, keys_to_strip={"raw"})
                 ir_dict.pop("raw_ops", None)
 
-            out_path = (out_dir / rel).with_suffix(".ir.json")
+            out_path = (out_dir / rel).with_suffix(".neutral.json")
 
             if not args.dry_run:
                 out_path.parent.mkdir(parents=True, exist_ok=True)

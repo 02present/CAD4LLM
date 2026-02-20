@@ -79,14 +79,14 @@ def flatten_rows(ir: Dict[str, Any], row_len: int) -> Tuple[List[List[int]], Dic
 
 
 def iter_ir_files(root: Path) -> List[Path]:
-    files = sorted(root.rglob("*.ir.json"))
+    files = sorted(root.rglob("*.neutral.json"))
     return [p for p in files if p.is_file()]
 
 
 def derive_out_paths(ir_path: Path, in_root: Path, out_root: Path) -> Tuple[Path, Path]:
     rel = ir_path.relative_to(in_root)
     name = rel.name
-    base = name[:-len(".ir.json")] if name.endswith(".ir.json") else ir_path.stem
+    base = name[:-len(".neutral.json")] if name.endswith(".neutral.json") else ir_path.stem
     out_h5 = out_root / rel.parent / f"{base}.h5"
     out_vec_json = out_root / rel.parent / f"{base}.vec.json"
     return out_h5, out_vec_json
@@ -94,7 +94,7 @@ def derive_out_paths(ir_path: Path, in_root: Path, out_root: Path) -> Tuple[Path
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--neutral_root", required=True, help="Input folder containing *.ir.json")
+    ap.add_argument("--neutral_root", required=True, help="Input folder containing *.neutral.json")
     ap.add_argument("--out_root", required=True, help="Output folder to write *.h5 (+ optional *.vec.json)")
     ap.add_argument("--dataset", default="vec", help="H5 dataset name (default vec)")
     ap.add_argument("--row_len", type=int, default=DEFAULT_ROW_LEN)
@@ -108,7 +108,7 @@ def main():
 
     ir_files = iter_ir_files(ir_root)
     if not ir_files:
-        raise SystemExit(f"[ERR] no *.ir.json under: {ir_root}")
+        raise SystemExit(f"[ERR] no *.neutral.json under: {ir_root}")
 
     if args.limit and args.limit > 0:
         ir_files = ir_files[: args.limit]

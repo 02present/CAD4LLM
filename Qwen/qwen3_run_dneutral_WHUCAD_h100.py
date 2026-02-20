@@ -439,7 +439,7 @@ def main() -> None:
 
     ap.add_argument("--ir_root", type=str, default="")
     ap.add_argument("--out_root", type=str, default="")
-    ap.add_argument("--glob", type=str, default="**/*.ir.json")
+    ap.add_argument("--glob", type=str, default="**/*.neutral.json")
     ap.add_argument("--out_suffix", type=str, default="_prompt.txt")
 
     ap.add_argument("--overwrite", type=int, default=1)
