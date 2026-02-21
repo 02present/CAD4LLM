@@ -58,7 +58,7 @@ python3 neutral_to_whucad.py --neutral_root <input_neutral_dir> --out_root <outp
 ```
 
 - `--neutral_root`: 변환할 `neutral` JSON 파일들이 위치한 디렉터리
-- `--out_root`: 변환 후 결과를 저장할 H5 파일들이 위치한 디렉터리
+- `--out_root`: 변환 후 결과를 저장할 h5 파일들이 위치한 디렉터리
 
 ### `neutral_to_xml.py`
 
