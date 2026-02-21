@@ -374,8 +374,8 @@ def qwen_generate(
     return raw
 
 
-def make_out_path(out_root: Path, ir_root: Path, ir_path: Path, out_suffix: str) -> Path:
-    rel = ir_path.relative_to(ir_root)
+def make_out_path(out_root: Path, neutral_root: Path, ir_path: Path, out_suffix: str) -> Path:
+    rel = ir_path.relative_to(neutral_root)
     out_name = rel.name.replace(".neutral.json", out_suffix)
     return (out_root / rel.parent / out_name).resolve()
 
@@ -437,7 +437,7 @@ def main() -> None:
     ap.add_argument("--neutral_json", type=str, default="")
     ap.add_argument("--out_txt", type=str, default="")
 
-    ap.add_argument("--ir_root", type=str, default="")
+    ap.add_argument("--neutral_root", type=str, default="")
     ap.add_argument("--out_root", type=str, default="")
     ap.add_argument("--glob", type=str, default="**/*.neutral.json")
     ap.add_argument("--out_suffix", type=str, default="_prompt.txt")
@@ -526,18 +526,18 @@ def main() -> None:
         dist_destroy_if_needed()
         return
 
-    if not args.ir_root or not args.out_root:
-        raise SystemExit("[ERR] Dir mode requires --ir_root and --out_root (or use --ir_json + --out_txt).")
+    if not args.neutral_root or not args.out_root:
+        raise SystemExit("[ERR] Dir mode requires --neutral_root and --out_root (or use --ir_json + --out_txt).")
 
-    ir_root = Path(args.ir_root).resolve()
+    neutral_root = Path(args.neutral_root).resolve()
     out_root = Path(args.out_root).resolve()
-    if not ir_root.exists():
-        raise SystemExit(f"[ERR] ir_root not found: {ir_root}")
+    if not neutral_root.exists():
+        raise SystemExit(f"[ERR] neutral_root not found: {neutral_root}")
     out_root.mkdir(parents=True, exist_ok=True)
 
-    all_files = sorted([p for p in ir_root.glob(args.glob) if p.is_file()])
+    all_files = sorted([p for p in neutral_root.glob(args.glob) if p.is_file()])
     if rank == 0:
-        print(f"[INFO] found {len(all_files)} files under {ir_root} (glob={args.glob})")
+        print(f"[INFO] found {len(all_files)} files under {neutral_root} (glob={args.glob})")
         print("[INFO] sharding: files[rank::world_size]")
 
     my_files = all_files[rank::world_size]
@@ -547,7 +547,7 @@ def main() -> None:
     skip_cnt = 0
 
     for i, ir_path in enumerate(my_files, 1):
-        out_path = make_out_path(out_root, ir_root, ir_path, args.out_suffix)
+        out_path = make_out_path(out_root, neutral_root, ir_path, args.out_suffix)
 
         ok, msg = run_one_file(model, tokenizer, ir_path, out_path, args)
         if ok:

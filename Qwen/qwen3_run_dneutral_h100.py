@@ -45,8 +45,8 @@ def rank_info() -> Tuple[int, int, int]:
     return rank, world, local_rank
 
 
-def list_ir_files(ir_root: Path, glob_pat: str) -> List[Path]:
-    files = sorted(ir_root.glob(glob_pat))
+def list_ir_files(neutral_root: Path, glob_pat: str) -> List[Path]:
+    files = sorted(neutral_root.glob(glob_pat))
     return [p for p in files if p.is_file()]
 
 
@@ -565,8 +565,8 @@ def generate_batch(
     return outs
 
 
-def make_out_path(ir_root: Path, out_root: Path, f: Path) -> Path:
-    rel = f.relative_to(ir_root)
+def make_out_path(neutral_root: Path, out_root: Path, f: Path) -> Path:
+    rel = f.relative_to(neutral_root)
     name = rel.name
     if name.endswith(".neutral.json"):
         out_name = name[:-len(".neutral.json")] + ".neutral.prompt.txt"
@@ -662,17 +662,17 @@ def main():
     ap.add_argument("--no_flash_attn", action="store_true")
     args = ap.parse_args()
 
-    ir_root = Path(args.ir_root).resolve()
+    neutral_root = Path(args.neutral_root).resolve()
     out_root = Path(args.out_root).resolve()
     ensure_dir(out_root)
 
     rank, world, local_rank = rank_info()
 
-    files = list_ir_files(ir_root, args.glob)
+    files = list_ir_files(neutral_root, args.glob)
     shard = shard_files(files, rank, world)
 
     if rank == 0:
-        print(f"[INFO] ir_root={ir_root}")
+        print(f"[INFO] neutral_root={neutral_root}")
         print(f"[INFO] out_root={out_root}")
         print(f"[INFO] total_files={len(files)} world_size={world}")
     print(f"[RANK {rank}] shard_files={len(shard)} local_rank={local_rank}")
@@ -694,7 +694,7 @@ def main():
             messages_list.append(msgs)
             summaries.append(summary)
 
-            out_txt = make_out_path(ir_root, out_root, f)
+            out_txt = make_out_path(neutral_root, out_root, f)
             ensure_dir(out_txt.parent)
             out_paths.append(out_txt)
 
