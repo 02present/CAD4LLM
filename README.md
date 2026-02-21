@@ -74,7 +74,7 @@ python3 neutral_to_xml.py --input <input_json_file_or_dir> --output <output_xml_
 
 ### `qwen3_run_dneutral_WHUCAD_h100.py`
 
-**기능**: Qwen 모델을 이용하여 CAD 데이터에서 UserPrompt를 생성. `neutral` 데이터를 기반으로 UserPrompt 생성
+**기능**: Qwen 모델을 이용하여 CAD 데이터에서 UserPrompt를 생성 (WHUCAD). `neutral` 데이터를 기반으로 UserPrompt 생성
 
 **사용법**:
 ```bash
@@ -87,16 +87,16 @@ python3 qwen3_run_dneutral_WHUCAD_h100.py --neutral_json <input_neutral_file> --
 **옵션**:
 - `--lang`: 언어 선택 (en, ko)
 
-### `qwen3_run_dneutral_h100_2.py`
+### `qwen3_run_dneutral_h100.py`
 
 **기능**: `neutral` 형식의 CAD 데이터를 Qwen3 모델을 통해 자연어 지시문 생성. (h100 , torchrun 전용)
 
 **사용법**:
 ```bash
-python3 qwen3_run_dneutral_h100_2.py --neutral_root <input_neutral_root> --out_root <output_txt_root>
+python3 qwen3_run_dneutral_h100.py --neutral_root <input_neutral_root> --out_root <output_txt_root>
 ```
 ```bash
-torchrun --standalone --nproc_per_node=4 qwen3_run_dneutral_h100_2.py --neutral_root <input_neutral_root>  --out_root <output_txt_root>
+torchrun --standalone --nproc_per_node=4 qwen3_run_dneutral_h100.py --neutral_root <input_neutral_root>  --out_root <output_txt_root>
 ```
 
 - `--neutral_root`: `neutral` JSON 파일들이 위치한 디렉토리
