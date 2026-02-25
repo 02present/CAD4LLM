@@ -24,13 +24,13 @@ python3 deepcad_json_to_neutral_batch.py --root <cad_json_root> --out_dir <out>
 **옵션**:
 - `--keep_raw`: 원본 데이터를 유지하면서 변환
 
-### `whucad_vec_to_neutral.py`
+### `h5_to_neutral.py`
 
-**기능**: WHUCAD의 벡터 데이터를 `neutral` 형식으로 변환
+**기능**: 벡터 데이터를 `neutral` 형식으로 변환
 
 **사용법**:
 ```bash
-python3 whucad_vec_to_neutral.py --in_h5 <input_h5_file> --out_json <output_json_file>
+python3 h5_to_neutral.py --in_h5 <input_h5_file> --out_json <output_json_file>
 ```
 
 - `--in_h5`: 변환할 WHUCAD 데이터가 포함된 `.h5` 파일
