@@ -1,7 +1,6 @@
 
 # CAD4LLM
 https://drive.google.com/drive/folders/137db_VVZ09NnmAlIaSRz4e0Fzj7f4L0S?usp=sharing
-<img width="1330" height="62" alt="image" src="https://github.com/user-attachments/assets/79cdfd2f-6745-4815-85bb-12b255b17c4e" />
 
 
 ## 파일 목록 및 설명
