@@ -1,0 +1,110 @@
+{
+  "schema": "cad_neutral.v0.1",
+  "meta": {
+    "source": "Onshape",
+    "sample_id": "features_5f65e6ff06d7a2a3a76bd527_830c690dae75575a7945b8ba",
+    "units": "mm",
+    "input_relpath": "features_5f65e6ff06d7a2a3a76bd527_830c690dae75575a7945b8ba.json"
+  },
+  "sequence": [
+    {
+      "id": "F1",
+      "type": "Sketch",
+      "name": "Sketch 1",
+      "plane": {
+        "kind": "XY"
+      },
+      "entities": [
+        {
+          "id": "E1",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -25.0,
+            43.301270189221924
+          ],
+          "p1": [
+            -25.0,
+            -43.301270189221924
+          ]
+        },
+        {
+          "id": "E2",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            -25.0,
+            -43.301270189221924
+          ],
+          "p1": [
+            49.99999999999999,
+            -1.3877787807814457e-14
+          ]
+        },
+        {
+          "id": "E3",
+          "kind": "Line",
+          "is_construction": false,
+          "p0": [
+            49.99999999999999,
+            -2.0816681711721685e-14
+          ],
+          "p1": [
+            -24.999999999999975,
+            43.301270189221945
+          ]
+        }
+      ],
+      "summary": {
+        "n_lines": 3,
+        "n_arcs": 0,
+        "n_circles": 0,
+        "n_entities": 3,
+        "bbox": [
+          -25.0,
+          -43.301270189221924,
+          49.99999999999999,
+          43.301270189221945
+        ]
+      }
+    },
+    {
+      "id": "F2",
+      "type": "Extrude",
+      "name": "Extrude 1",
+      "sketch_ref": "F1",
+      "distance_mm": 20.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "NewBody",
+      "end_condition": "Blind"
+    },
+    {
+      "id": "F3",
+      "type": "Fillet",
+      "name": "Fillet 1",
+      "radius_mm": 8.0
+    },
+    {
+      "id": "F4",
+      "type": "Extrude",
+      "name": "Extrude 2",
+      "sketch_ref": "F1",
+      "distance_mm": 20.0,
+      "direction": {
+        "kind": "Normal",
+        "sign": 1
+      },
+      "operation": "Remove",
+      "end_condition": "Blind"
+    },
+    {
+      "id": "F5",
+      "type": "Fillet",
+      "name": "Fillet 3",
+      "radius_mm": 5.0
+    }
+  ]
+}
